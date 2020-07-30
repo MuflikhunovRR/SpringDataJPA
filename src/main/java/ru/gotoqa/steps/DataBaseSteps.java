@@ -1,6 +1,6 @@
 package ru.gotoqa.steps;
 
-import cucumber.api.java.en.Then;
+import io.cucumber.java.en.Then;
 import org.junit.jupiter.api.Assertions;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.gotoqa.entity.GeographyEntity;

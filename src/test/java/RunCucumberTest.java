@@ -1,12 +1,13 @@
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 /**
  *
  */
 @RunWith(Cucumber.class)
-@CucumberOptions(features = { "src/test/java/resources" }, plugin = { "pretty", "json:target/cucumber/cucumber.json" })
+@CucumberOptions(features = { "src/test/java/resources" },
+        plugin = { "pretty", "json:target/cucumber/cucumber.json" })
 public class RunCucumberTest {
 
 }
