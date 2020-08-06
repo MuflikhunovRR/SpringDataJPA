@@ -12,16 +12,13 @@ import org.springframework.stereotype.Component;
 public class AppProperties {
 
     @Value("${spring.datasource.url}")
-    private String dbMySqlUrl;
-
-    @Value("${hibernate.mysql.schema}")
-    private String dbMySqlSchema;
+    private String dblUrl;
 
     @Value("${spring.datasource.username}")
-    private String dbMySqlLogin;
+    private String dbLogin;
 
     @Value("${spring.datasource.password}")
-    private String dbMySqlPassword;
+    private String dbPassword;
 
     @Value("${spring.datasource.driverClassName}")
     private String dbDriverClassname;

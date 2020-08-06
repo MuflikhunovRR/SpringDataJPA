@@ -62,9 +62,9 @@ public class JpaConfig {
     public DataSource dataSource(AppProperties props) {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(props.getDbDriverClassname());
-        dataSource.setUrl(props.getDbMySqlUrl());
-        dataSource.setUsername(props.getDbMySqlLogin());
-        dataSource.setPassword(props.getDbMySqlPassword());
+        dataSource.setUrl(props.getDblUrl());
+        dataSource.setUsername(props.getDbLogin());
+        dataSource.setPassword(props.getDbPassword());
 
         // schema init
         Resource initSchema = new ClassPathResource("schema-h2.sql");
