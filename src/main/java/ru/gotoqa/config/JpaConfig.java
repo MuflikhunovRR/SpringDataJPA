@@ -21,7 +21,7 @@ import java.util.Properties;
 @Configuration
 @ComponentScan(basePackages = {"ru.gotoqa"})
 @EnableJpaRepositories("ru.gotoqa.repository")
-@PropertySource("file:application.properties")
+@PropertySource("classpath:application.properties")
 @EnableTransactionManagement
 public class JpaConfig {
 
