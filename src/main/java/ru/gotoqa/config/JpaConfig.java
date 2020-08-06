@@ -5,8 +5,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.jdbc.datasource.init.DatabasePopulator;
+import org.springframework.jdbc.datasource.init.DatabasePopulatorUtils;
+import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -60,6 +65,12 @@ public class JpaConfig {
         dataSource.setUrl(props.getDbMySqlUrl());
         dataSource.setUsername(props.getDbMySqlLogin());
         dataSource.setPassword(props.getDbMySqlPassword());
+
+        // schema init
+        Resource initSchema = new ClassPathResource("schema-h2.sql");
+        Resource initData = new ClassPathResource("data-h2.sql");
+        DatabasePopulator databasePopulator = new ResourceDatabasePopulator(initSchema, initData);
+        DatabasePopulatorUtils.execute(databasePopulator, dataSource);
 
         return dataSource;
     }

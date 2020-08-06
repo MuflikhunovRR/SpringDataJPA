@@ -11,7 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Date;
 
 /**
  * Entity class for mapping to Person table
@@ -21,7 +20,7 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "Person", schema = "actors")
+@Table(name = "Person")
 public class PersonEntity {
 
     @Id
@@ -33,7 +32,7 @@ public class PersonEntity {
 
     @Column(name = "last_name")
     private String lastName;
-    private Date birthday;
+    private String birthday;
     private String email;
     private String phone;
     private String job;

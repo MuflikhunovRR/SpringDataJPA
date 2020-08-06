@@ -11,31 +11,31 @@ import org.springframework.stereotype.Component;
 @Getter
 public class AppProperties {
 
-    @Value("${hibernate.mysql.url}")
+    @Value("${spring.datasource.url}")
     private String dbMySqlUrl;
 
     @Value("${hibernate.mysql.schema}")
     private String dbMySqlSchema;
 
-    @Value("${hibernate.mysql.login}")
+    @Value("${spring.datasource.username}")
     private String dbMySqlLogin;
 
-    @Value("${hibernate.mysql.password}")
+    @Value("${spring.datasource.password}")
     private String dbMySqlPassword;
 
-    @Value("${driver.mysql.classname}")
+    @Value("${spring.datasource.driverClassName}")
     private String dbDriverClassname;
 
     @Value("${em.packages.scan}")
     private String dbPackagesScan;
 
-    @Value("${hibernate.dialect}")
+    @Value("${spring.jpa.database-platform}")
     private String hibernateDialect;
 
-    @Value("${hibernate.show_sql}")
+    @Value("${spring.jpa.show-sql}")
     private String hibernateShowSql;
 
-    @Value("${hibernate.hbm2ddl.auto}")
+    @Value("${spring.jpa.hibernate.ddl-auto}")
     private String hibernateHbm2ddlAuto;
 
 }

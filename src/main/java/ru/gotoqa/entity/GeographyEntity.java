@@ -21,7 +21,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "Geography", schema = "actors")
+@Table(name = "Geography")
 public class GeographyEntity {
 
     @EmbeddedId
