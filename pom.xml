@@ -16,7 +16,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <spring.version>5.1.5.RELEASE</spring.version>
         <spring.data.jpa.version>2.1.5.RELEASE</spring.data.jpa.version>
-        <hibernate.version>5.4.1.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
         <lombok.version>1.16.18</lombok.version>
         <slf4j.version>1.7.5</slf4j.version>
         <cucumber.version>6.3.0</cucumber.version>
